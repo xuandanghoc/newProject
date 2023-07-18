@@ -1,0 +1,135 @@
+:root {
+    --primary: #B88E2F;
+}
+
+
+.blackColor {
+    color: #000;
+}
+
+.container {
+    max-width: 1286px !important;
+    padding: 0 !important;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    .title {
+        color: #000;
+        font-family: Montserrat;
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    img {
+        padding-right: 5px;
+    }
+}
+
+.nav-mid {
+    display: flex;
+    align-items: center;
+    gap: 75px;
+    a {
+        color: #000;
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        padding: 0;
+    }
+
+}
+
+.nav-icon {
+
+    a {
+        padding: 0;
+    }
+    img {
+        width: 28px;
+        height: 28px;
+    }
+    gap: 45px;
+    flex-shrink: 0;
+
+}
+
+.header-container {
+    padding: 30px 0;
+}
+
+* {
+    padding: 0;
+}
+
+.banner-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 717px;
+    background-repeat: no-repeat;
+}
+.banner-container-bg {
+    background-size: cover;
+    width: 44.7%;
+    font-family: Poppins;
+    background-color: #FFF3E3;
+    border-radius: 10px;
+    height: 443px;
+    position: absolute;
+    right: 58px;
+    padding: 62px 0 37px 41px;
+    margin-top: 42px;
+
+
+    .banner-container-text {
+        .banner-container-text-top {
+            color: var(--font-color, #333);
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: 3px;
+            margin-bottom: 4px;
+        }
+        h1 {
+            flex-shrink: 0;
+            color: var(--primary, #B88E2F);
+            font-size: 52px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 65px;
+            width: 70%;
+            margin-bottom: 17px;
+        }
+        .banner-container-text-bottom {
+            color: var(--font-color, #333);
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px;
+            margin-bottom: 46px;
+            width: 72%;
+        }
+    }
+    .button-buy {
+        button {
+            color: #FFF;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+            font-family: Poppins;
+            padding: 25px 72px;
+            background-color: var(--primary, #B88E2F);
+            border: none;
+        }
+    }
+}
+
