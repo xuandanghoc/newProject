@@ -12,10 +12,10 @@ function Header() {
   return (
     <>
       <Container>
-        <Nav activeKey="1" className="header-container justify-content-between">
+        <Nav activeKey="1" className="header-container justify-content-between align-items-center">
           <Nav.Item>
             <Nav.Link eventKey="1" href="#/home" className="nav-logo d-flex align-items-center p-0">
-              <Logo className="p-0"/>
+              <Logo className="p-0 align-items-center"/>
             </Nav.Link>
           </Nav.Item>
           <Nav.Item className="nav-mid">

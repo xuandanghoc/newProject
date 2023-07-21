@@ -4,7 +4,7 @@ import Scss from "../home/Header.scss";
 
 function Logo() {
   return (
-    <div className="logo">
+    <div className="logo d-flex align-items-center">
       <img
         src={imageLogo}
         width="50"
