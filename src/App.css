@@ -2,6 +2,10 @@
   /* text-align: center; */
 }
 
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
 
 .App-logo {
   height: 40vmin;
@@ -30,11 +34,7 @@
   color: #61dafb;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  font-family: Poppins;
-}
+
 
 @keyframes App-logo-spin {
   from {

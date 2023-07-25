@@ -1,6 +1,6 @@
 import React from "react";
 import imageLogo from "../../assets/Logo.png";
-import Scss from "../home/Header.scss";
+import Scss from "../global/Home.scss";
 
 function Logo() {
   return (

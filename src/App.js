@@ -4,6 +4,7 @@ import Header from "../src/components/home/Header";
 import Banner from "../src/components/banner/Banner";
 import Category from "../src/components/home/categoryProduct/Category";
 import Products from "./components/home/product/Products";
+import Pattern from "./components/home/pattern/Pattern";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       </section>
       <Category />
       <Products />
+      <Pattern />
     </div>
   );
 }

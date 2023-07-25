@@ -15,7 +15,7 @@ function Header() {
         <Nav activeKey="1" className="header-container justify-content-between align-items-center">
           <Nav.Item>
             <Nav.Link eventKey="1" href="#/home" className="nav-logo d-flex align-items-center p-0">
-              <Logo className="p-0 align-items-center"/>
+              <Logo className="p-0"/>
             </Nav.Link>
           </Nav.Item>
           <Nav.Item className="nav-mid">
