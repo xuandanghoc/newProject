@@ -13,13 +13,12 @@ function Pattern() {
           <div
             className="pattern-item"
             style={{
-              background: `url(${BedRoom})`,
+              backgroundImage: `url(${BedRoom})`,
             }}
           >
             <BoxTitle />
           </div>
         <SlideItem />
-
         </div>
 
       </div>

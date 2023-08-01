@@ -1,10 +1,12 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Header from "../src/components/home/Header";
-import Banner from "../src/components/banner/Banner";
-import Category from "../src/components/home/categoryProduct/Category";
-import Products from "./components/home/product/Products";
-import Pattern from "./components/home/pattern/Pattern";
+import Home from "../src/components/home/Home";
+import Shop from "../src/components/shopPage/Shop";
+import React from "react";
+import { NavigationContainer } from 'react-navigation/native';
+import { createStackNavigator } from 'react-navigation/stack';
+
+const Stack = createStackNavigator();
 
 function App() {
   return (
@@ -12,12 +14,13 @@ function App() {
       <header className="App-header">
         <Header />
       </header>
-      <section className="app-banner">
-        <Banner />
-      </section>
-      <Category />
-      <Products />
-      <Pattern />
+      <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Shop" component={Shop} />
+      </Stack.Navigator>
+    </NavigationContainer>
+      
     </div>
   );
 }

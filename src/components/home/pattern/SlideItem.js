@@ -2,6 +2,8 @@ import PatternItems from "../../global/PatternItem";
 import Pattern1 from "../../../assets/pattern/Pattern1.png";
 import Pattern2 from "../../../assets/pattern/Pattern2.png";
 import Dot from "../../global/Dot";
+import ArrowPrevious from "../../global/ArrowPrevious";
+import ArrowNext from "../../global/ArrowNext";
 
 function SlideItem() {
   return (
@@ -16,6 +18,9 @@ function SlideItem() {
         <Dot />
         <Dot />
       </div>
+      {/* <ArrowPrevious /> */}
+      <ArrowNext />
+
     </div>
   );
 }

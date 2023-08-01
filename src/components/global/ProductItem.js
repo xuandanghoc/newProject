@@ -8,7 +8,7 @@ function ProductItem(props) {
         <div
           className="product-item-image"
           style={{
-            background: `url(${bgImage})`,
+            backgroundImage: `url(${bgImage})`,
           }}
         >
           {circle !== "" && <span>{circle}</span>}
