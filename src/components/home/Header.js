@@ -8,62 +8,70 @@ import heartLogo from "../../assets/heart.png";
 import searchLogo from "../../assets/search.png";
 import cartLogo from "../../assets/shopping-cart-outlined.png";
 import { useLocation, NavLink, Link } from "react-router-dom";
-import Home from "../home/Home";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import { TitleContext, TitleProvider } from "../../context/UseContext";
 
-function Header() {
-  const navHome = () => {};
+function Header(props) {
+  const { handleTitleBannerClick } = props;
+  useEffect(() => {
+    localStorage.setItem("title", handleTitleBannerClick);
+    }, []);
+
   return (
     <>
-      <Container>
-        <Nav
-          activeKey="1"
-          className="header-container justify-content-between align-items-center"
-        >
-          <Nav.Item>
-            <Nav.Link
-              eventKey="1"
-              href="#/home"
-              className="nav-logo d-flex align-items-center p-0"
+      <div id="header">
+        <Container>
+          <div className="header-container d-flex justify-content-between align-items-center">
+            <Nav
+              activeKey="1"
+              className="header-logo justify-content-between align-items-center"
             >
               <Logo className="p-0" />
-            </Nav.Link>
-          </Nav.Item>
-          <Nav.Item className="nav-mid">
-            <Nav.Link eventKey="2" title="Item"  onClick={() => {
-              window.location.href = 'Home.js'
-            }}>
-              Home
-            </Nav.Link>
-            <Nav.Link eventKey="2" title="Item" href="Shop.js" onClick={() => {
-              window.location.href = 'Shop.js'
-            }}>
-              Shop
-            </Nav.Link>
-            <Nav.Link eventKey="2" title="Item">
-              About
-            </Nav.Link>
-            <Nav.Link eventKey="2" title="Item">
-              Contact
-            </Nav.Link>
-          </Nav.Item>
-          <Nav.Item className="nav-icon d-flex align-items-center">
-            <Nav.Link eventKey="2" title="Item">
-              <img src={contactLogo} alt="contact" />
-            </Nav.Link>
-            <Nav.Link eventKey="2" title="Item">
-              <img src={searchLogo} alt="search" />
-            </Nav.Link>
-            <Nav.Link eventKey="2" title="Item">
-              <img src={heartLogo} alt="heart" />
-            </Nav.Link>
-            <Nav.Link eventKey="2" title="Item">
-              <img src={cartLogo} alt="cart" />
-            </Nav.Link>
-          </Nav.Item>
-        </Nav>
-      </Container>
+            </Nav>
+            <Nav className="d-flex">
+              <Nav>
+                <Link
+                  to="/"
+                  onClick={handleTitleBannerClick}
+                >
+                  Home
+                </Link>
+              </Nav>
+              <Nav to="/shop">
+                <Link
+                  to="/shop"
+                  onClick={handleTitleBannerClick}
+                >
+                  Shop
+                </Link>
+              </Nav>
+              <Nav>
+                <Link to="/about">About</Link>
+              </Nav>
+              <Nav>
+                <Link to="/contact">Contact</Link>
+              </Nav>
+            </Nav>
+
+            <Nav className="nav-icon d-flex align-items-center">
+              <Link title="Item">
+                <img src={contactLogo} alt="contact" />
+              </Link>
+              <Link title="Item">
+                <img src={searchLogo} alt="search" />
+              </Link>
+              <Link title="Item">
+                <img src={heartLogo} alt="heart" />
+              </Link>
+              <Link title="Item">
+                <img src={cartLogo} alt="cart" />
+              </Link>
+            </Nav>
+          </div>
+        </Container>
+      </div>
     </>
   );
 }
+
 export default Header;

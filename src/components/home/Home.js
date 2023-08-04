@@ -4,7 +4,6 @@ import Category from "./categoryProduct/Category";
 import Products from "./product/Products";
 import Pattern from "./pattern/Pattern";
 import Share from "./shareSetup/Share";
-import Footer from "./footer/Footer";
 
 function Home() {
   return (
@@ -16,7 +15,6 @@ function Home() {
       <Products />
       <Pattern />
       <Share />
-      <Footer />
     </div>
   );
 }
